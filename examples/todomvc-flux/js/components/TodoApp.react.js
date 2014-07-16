@@ -55,7 +55,7 @@ var TodoApp = React.createClass({
    * @return {object}
    */
   render: function() {
-  	return (
+    return (
       <div>
         <Header />
         <MainSection
@@ -64,7 +64,7 @@ var TodoApp = React.createClass({
         />
         <Footer allTodos={this.state.allTodos} />
       </div>
-  	);
+    );
   },
 
   /**
