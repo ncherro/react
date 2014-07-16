@@ -45,6 +45,7 @@ var React = {
   Children: {
     map: ReactChildren.map,
     forEach: ReactChildren.forEach,
+    count: ReactChildren.count,
     only: onlyChild
   },
   DOM: ReactDOM,
@@ -104,6 +105,7 @@ if (__DEV__) {
       Function.prototype.bind,
       Object.keys,
       String.prototype.split,
+      String.prototype.trim,
 
       // shams
       Object.create,
@@ -114,8 +116,7 @@ if (__DEV__) {
       if (!expectedFeatures[i]) {
         console.error(
           'One or more ES5 shim/shams expected by React are not available: ' +
-          'http://facebook.github.io/react/docs/working-with-the-browser.html' +
-          '#polyfills-needed-to-support-older-browsers'
+          'http://fb.me/react-warning-polyfills'
         );
         break;
       }
@@ -125,6 +126,6 @@ if (__DEV__) {
 
 // Version exists only in the open-source version of React, not in Facebook's
 // internal version.
-React.version = '0.11.0-alpha';
+React.version = '0.11.0-rc1';
 
 module.exports = React;
